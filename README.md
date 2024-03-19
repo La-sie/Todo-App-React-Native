@@ -12,4 +12,4 @@ Snack is Open Source. You can find the code on the [GitHub repo](https://github.
 
 # IMAGES
 
-<img src='./assets/todo.png' alt>
+<img src='./assets/todo.png' alt='todo app'>
