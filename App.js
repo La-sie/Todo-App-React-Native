@@ -10,6 +10,7 @@ Alert,
 TouchableWithoutFeedback,
 Keyboard} from 'react-native';
 import React, {useState} from 'react';
+import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 
 
 export default function App() {
@@ -74,9 +75,13 @@ export default function App() {
          data={todos}
          renderItem={({item}) => (
           <TouchableOpacity onPress={() => pressHandler(item.key)}>
-              <Text style={styles.item}>
-              {item.text}
-              </Text>
+            <View style={styles.item}> 
+              <MaterialIcons name='delete' size={20} color={'purple'}/>
+               <Text style={styles.itemText}>
+                {item.text} 
+               </Text>
+            </View> 
+              
           </TouchableOpacity>
         )}/>
       </View>
@@ -108,12 +113,15 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: 5,
     borderStyle: 'solid',
-    marginTop: 15
+    marginTop: 15,
+    flexDirection: 'row'
   },
   list:{
     marginTop: 5,
     marginLeft: 15,
-    marginRight: 15
+    marginRight: 15,
+    flex: 1,
+    marginBottom: 10
   },
   addTodo:{
     marginBottom: 30,
@@ -130,5 +138,8 @@ const styles = StyleSheet.create({
     marginLeft: 60,
     marginRight: 60,
     marginBottom: 20
+  },
+  itemText:{
+    marginLeft: 10
   }
 });
