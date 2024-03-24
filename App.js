@@ -132,7 +132,7 @@ const styles = StyleSheet.create({
   },
   input:{
     padding: 5,
-    color: 'gray'
+    color: '#ddd'
   },
   btn:{
     marginLeft: 60,
